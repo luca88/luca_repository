@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<compilation>
+
+   <brano id="1">
+   <titolo> titolo A </titolo>
+   <autore> autore A </autore>
+   <genere> genere A </genere>
+   </brano>
+   
+   <brano id="2">
+   <titolo> titolo B </titolo>
+   <autore> autore B </autore>
+   <genere> genere B </genere>
+   </brano>
+   
+   <brano id="3">
+  <titolo>  titolo C </titolo>
+   <autore> autore C </autore>
+   <genere> genere C </genere>
+   </brano>
+   
+</compilation>

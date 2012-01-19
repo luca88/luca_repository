@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="/usr/lib/java" version="1.6.0_16">
+<bootpath>
+<entry path="/usr/lib/java/lib/resources.jar"/>
+<entry path="/usr/lib/java/lib/rt.jar"/>
+<entry path="/usr/lib/java/lib/sunrsasign.jar"/>
+<entry path="/usr/lib/java/lib/jsse.jar"/>
+<entry path="/usr/lib/java/lib/jce.jar"/>
+<entry path="/usr/lib/java/lib/charsets.jar"/>
+<entry path="/usr/lib/java/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/usr/lib/java/lib/ext"/>
+<entry path="/usr/java/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/usr/lib/java/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>
