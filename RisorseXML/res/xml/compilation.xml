@@ -3,21 +3,21 @@
 <compilation>
 
    <brano id="1">
-   <titolo> titolo A </titolo>
-   <autore> autore A </autore>
-   <genere> genere A </genere>
+   <titolo>titolo1</titolo>
+   <autore>autore1</autore>
+   <genere>genere1</genere>
    </brano>
    
    <brano id="2">
-   <titolo> titolo B </titolo>
-   <autore> autore B </autore>
-   <genere> genere B </genere>
+   <titolo>titolo2</titolo>
+   <autore>autore2</autore>
+   <genere>genere2</genere>
    </brano>
    
    <brano id="3">
-  <titolo>  titolo C </titolo>
-   <autore> autore C </autore>
-   <genere> genere C </genere>
+   <titolo>titolo3</titolo>
+   <autore>autore3</autore>
+   <genere>genere3</genere>
    </brano>
    
 </compilation>

@@ -11,37 +11,31 @@ import android.util.Log;
 
 public class Main extends Activity {
     /** Called when the activity is first created. */
-	String str;
-	String id;
-	String elementValue;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-	    }
-    
-    XmlResourceParser parser = getResources().getXml(R.xml.compilation);{
-    
-    try{
-    	int eventType = parser.getEventType();
-    	while (eventType != XmlResourceParser.END_DOCUMENT) {
-    		if (eventType == XmlResourceParser.START_TAG) {
-    			String tagName = parser.getName();
-    			if ("brano".equals(tagName)) {
-    				 id = parser.getAttributeValue(0);
-    			}
-    		}else if (eventType == XmlResourceParser.TEXT) {
-    			 elementValue = parser.getText();
-    		}
-    		eventType = parser.next();
-    	}
-    }catch (XmlPullParserException a) {
-    	a.printStackTrace();
-    }catch (IOException e) {
-    	e.printStackTrace();
+        XmlResourceParser parser = getResources().getXml(R.xml.compilation);
+        try{
+        	int eventType = parser.getEventType();
+        	while (eventType != XmlResourceParser.END_DOCUMENT) {
+        		if (eventType == XmlResourceParser.START_TAG) {
+        			String tagName = parser.getName();
+        			if ("brano".equals(tagName))  {
+        				String id = parser.getAttributeValue(0);
+        				Log.d("XML PARSER", id);
+        			} 
+        		}else if (eventType == XmlResourceParser.TEXT) {
+                	String elementValue = parser.getText();
+                	Log.d("XML PARSER", elementValue);
+                } 
+        		eventType = parser.next();
+        	}
+        } catch (XmlPullParserException e) {
+        	e.printStackTrace();
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
     }
-    
-    str = "FATTO";
-    Log.d("XML PARSER", str);
-}}
+}
