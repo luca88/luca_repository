@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 public class DoToastActivity extends Activity implements OnClickListener {
     /** Called when the activity is first created. */
-EditText edt;
-Button btn;
+	EditText edt;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,37 +22,33 @@ Button btn;
         //Linear Layout
         LinearLayout ll =new LinearLayout(DoToastActivity.this);
         ll.setOrientation(LinearLayout.VERTICAL);
-        ll.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        ll.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));      
         
-        //Creo EditText
+        //EditText
         edt=new EditText(this);
-        edt.setText("AGGIUGI TESTO");
-        edt.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        edt.setText("default");
+        edt.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));     
         
         //aggiungo l'edit
         ll.addView(edt);
-        setContentView(edt);
-        //Aggiungo il log
+        setContentView(edt);  
         Log.d("ADD", "Edit");
        
         //Bottone
-        btn=new Button(this);
+        Button btn=new Button(this);
         btn.setText("Saluta");
-        btn.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        btn.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));       
        
         //aggiungo bottone
         ll.addView(btn);
         setContentView(ll);
-        //Aggiungo il log riferito al bottone
-        Log.d("ADD", "Button");
+        Log.d("ADD", "Bottom");
     }
 
-    public void onClick(View v) {
-    String iltesto = edt.getText().toString();
-    Toast.makeText(getApplicationContext(), iltesto , Toast.LENGTH_LONG).show();
-    Log.d("HAI SCRITTO: ", iltesto);
-   }
+	@Override
+	public void onClick(View v) {
+		String iltesto = edt.getText().toString();
+		Toast.makeText(getApplicationContext(), iltesto , Toast.LENGTH_LONG).show();
+		Log.d("onClick", iltesto);
+	}    
 }
-    
-    
-    
